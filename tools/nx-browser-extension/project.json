@@ -1,0 +1,44 @@
+{
+  "name": "nx-browser-extension",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "tools/nx-browser-extension/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/tools/nx-browser-extension",
+        "main": "tools/nx-browser-extension/src/index.ts",
+        "tsConfig": "tools/nx-browser-extension/tsconfig.lib.json",
+        "assets": [
+          "tools/nx-browser-extension/*.md",
+          {
+            "input": "./tools/nx-browser-extension/src",
+            "glob": "**/!(*.ts)",
+            "output": "./src"
+          },
+          {
+            "input": "./tools/nx-browser-extension/src",
+            "glob": "**/*.d.ts",
+            "output": "./src"
+          },
+          {
+            "input": "./tools/nx-browser-extension",
+            "glob": "generators.json",
+            "output": "."
+          },
+          {
+            "input": "./tools/nx-browser-extension",
+            "glob": "executors.json",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

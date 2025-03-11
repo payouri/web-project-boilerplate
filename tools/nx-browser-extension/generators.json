@@ -1,0 +1,9 @@
+{
+  "generators": {
+    "generate-extension": {
+      "factory": "./src/generators/generate-extension",
+      "schema": "./src/generators/schema.json",
+      "description": "generate-extension generator"
+    }
+  }
+}

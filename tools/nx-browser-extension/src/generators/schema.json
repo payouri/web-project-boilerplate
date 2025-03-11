@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/schema",
+  "$id": "GenerateExtension",
+  "title": "",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What name would you like to use?"
+    },
+    "template": {
+      "type": "string",
+      "description": "Which template to use",
+      "default": "react-content-script",
+      "$default": {
+        "$source": "argv",
+        "index": 1
+      },
+      "x-prompt": {
+        "message": "Which template to use?",
+        "type": "list",
+        "items": [
+          {
+            "value": "react-content-script",
+            "label": "React Content Script"
+          },
+          {
+            "value": "typescript",
+            "label": "TypeScript"
+          },
+          {
+            "value": "react",
+            "label": "React"
+          },
+          {
+            "value": "vue",
+            "label": "Vue"
+          }
+        ]
+      }
+    },
+    "required": [
+      "name"
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "auth",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/features/auth/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/libs/features/auth",
+        "main": "libs/features/auth/src/index.ts",
+        "tsConfig": "libs/features/auth/tsconfig.lib.json",
+        "assets": [
+          "libs/features/auth/*.md"
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+    },
+    "tags": []
+  }
+}

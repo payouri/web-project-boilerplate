@@ -1,0 +1,9 @@
+{
+  "generators": {
+    "hono-backend": {
+      "factory": "./generators/hono-backend",
+      "schema": "./generators/schema.json",
+      "description": "hono-backend generator"
+    }
+  }
+}
