@@ -1,0 +1,20 @@
+{
+  "name": "exchange-rate-api-client",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/clients/exchange-rate-api-client/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/clients/exchange-rate-api-client",
+        "tsConfig": "libs/clients/exchange-rate-api-client/tsconfig.lib.json",
+        "packageJson": "libs/clients/exchange-rate-api-client/package.json",
+        "main": "libs/clients/exchange-rate-api-client/src/index.ts",
+        "assets": ["libs/clients/exchange-rate-api-client/*.md"]
+      }
+    }
+  }
+}

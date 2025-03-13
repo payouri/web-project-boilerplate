@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Run script automatically",
+    "description": "Runs a script on www.example.com automatically when user installs the extension",
+    "version": "1.0",
+    "background": {
+        "service_worker": "service-worker.mjs"
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "detect-currency.mjs"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ],
+    "permissions": [
+        "scripting",
+        "activeTab"
+    ]
+}

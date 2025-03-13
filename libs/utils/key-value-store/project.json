@@ -1,0 +1,20 @@
+{
+  "name": "key-value-store",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/utils/key-value-store/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/utils/key-value-store",
+        "tsConfig": "libs/utils/key-value-store/tsconfig.lib.json",
+        "packageJson": "libs/utils/key-value-store/package.json",
+        "main": "libs/utils/key-value-store/src/index.ts",
+        "assets": ["libs/utils/key-value-store/*.md"]
+      }
+    }
+  }
+}

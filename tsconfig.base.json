@@ -16,8 +16,13 @@
     "baseUrl": ".",
     "paths": {
       "auth": ["libs/features/auth/src/index.ts"],
+      "exchange-rate-api-client": [
+        "libs/clients/exchange-rate-api-client/src/index.ts"
+      ],
+      "key-value-store": ["libs/utils/key-value-store/src/index.ts"],
       "nx-browser-extension": ["tools/nx-browser-extension/src/index.ts"],
       "nx-hono": ["tools/nx-hono/src/index.ts"],
+      "persistance": ["libs/features/persistance/src/index.ts"],
       "user": ["libs/entities/user/src/index.ts"]
     }
   },
